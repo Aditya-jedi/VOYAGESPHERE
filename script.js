@@ -1,73 +1,51 @@
 // Wait for the DOM content to load before executing scripts
 document.addEventListener('DOMContentLoaded', function () {
-    // Login functionality
+    // Handle Login Form Submission
     const loginForm = document.getElementById('loginForm'); // Reference to the login form
-    const popup = document.getElementById('popup'); // Reference to the login success popup
-    const closePopup = document.getElementById('closePopup'); // Reference to the close button
+    const loginSuccessMessage = document.getElementById('loginSuccessMessage'); // Reference to the success message for login
 
     // Event listener for submitting the login form
     if (loginForm) {
         loginForm.addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent default form submission
 
-            // Show the popup when user logs in 
-            popup.classList.remove('hidden');
+            // Get the username and password values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Basic validation to check if both fields are filled
+            if (username && password) {
+                loginSuccessMessage.textContent = 'Login successful! Welcome, ' + username + '!'; // Show success message
+                loginSuccessMessage.classList.remove('hidden'); // Make the success message visible
+                loginForm.reset(); // Reset the form fields
+            }
         });
     }
 
-    // Close the login success popup when the close button is clicked
-    if (closePopup) {
-        closePopup.addEventListener('click', function () {
-            popup.classList.add('hidden'); // Hide the popup
-        });
-    }
-
-    // Close popup when clicking outside the popup content
-    window.addEventListener('click', function (event) {
-        if (event.target === popup) {
-            popup.classList.add('hidden'); // Hide the popup
-        }
-    });
-
-    // Feedback form submission with popup
+    // Handle Feedback Form Submission
     const feedbackForm = document.getElementById('feedbackForm'); // Reference to the feedback form
-    const successPopup = document.getElementById('successMessage'); // Reference to the feedback success popup
-    const closeFeedbackPopup = document.getElementById('closePopupFeedback'); // Reference to the close button for feedback popup
+    const feedbackSuccessMessage = document.getElementById('feedbackSuccessMessage'); // Reference to the success message for feedback
 
     // Event listener for submitting the feedback form
     if (feedbackForm) {
         feedbackForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent default form submission
+            event.preventDefault(); // Prevent default submission
 
+            // Get the selected feedback type and message
+            const feedbackType = document.querySelector('input[name="feedbackType"]:checked').value; // Get checked feedback type
             const userMessage = document.getElementById('userMessage').value; // Get user message
 
-            // Simple validation check to ensure feedback is provided
-            if (userMessage.trim() === "") {
-                alert('Please enter your feedback before submitting.'); // Alert if empty
-                return; // Stop form submission if validation fails
+            // Basic validation to ensure the feedback message is not empty
+            if (userMessage.trim() !== "") {
+                feedbackSuccessMessage.textContent = 'Thank you for your feedback! We appreciate it!'; // Show success message
+                feedbackSuccessMessage.classList.remove('hidden'); // Make the success message visible
+                feedbackForm.reset(); // Reset the form fields
             }
-
-            // Show success popup upon successful submission
-            successPopup.classList.remove('hidden');
         });
     }
-
-    // Close the feedback success popup when the close button is clicked
-    if (closeFeedbackPopup) {
-        closeFeedbackPopup.addEventListener('click', function () {
-            successPopup.classList.add('hidden'); // Hide the popup
-        });
-    }
-
-    // Close the popup when clicking outside the popup content
-    window.addEventListener('click', function (event) {
-        if (event.target === successPopup) {
-            successPopup.classList.add('hidden'); // Hide the popup
-        }
-    });
 
     // Populate the continent page with countries
-    const continentNameEl = document.getElementById('continentName'); // Reference continent name placeholder
+    const continentNameEl = document.getElementById('continentName'); // Reference to continent name placeholder
     const countryList = document.getElementById('countryList'); // Reference to country list
     const urlParams = new URLSearchParams(window.location.search); // URL parameters for continent
     const continent = urlParams.get('continent'); // Get continent value from URL
