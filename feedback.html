@@ -4,70 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>VOYAGESPHERE - Feedback Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS file -->
+    <title>VOYAGESPHERE - Feedback Form</title> <!-- Page title -->
 </head>
 
-<title>VOYAGESPHERE - Home</title> <!-- Title that appears in the browser tab -->
-<body> 
+<body>
     <header>
         <nav>
             <div class="logo">
-                <h1>VOYAGESPHERE</h1>
+                <h1>VOYAGESPHERE</h1> <!-- Logo of the website -->
             </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="catalogue.html">Catalogue</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="index.html">Home</a></li> <!-- Link to Home page -->
+                <li><a href="catalogue.html">Catalogue</a></li> <!-- Link to Catalogue page -->
+                <li><a href="login.html">Login</a></li> <!-- Link to Login page -->
+                <li><a href="contact.html">Contact Us</a></li> <!-- Link to Contact Us page -->
+                <li><a href="feedback.html">Feedback</a></li> <!-- Link to Feedback page -->
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <h1>Feedback Form</h1>
-            <form id="feedbackForm">
+            <h1>Feedback Form</h1> <!-- Main heading for the feedback form -->
+            <form id="feedbackForm"> <!-- Feedback form with an ID for JavaScript targeting -->
                 <fieldset>
-                    <legend>Please provide your feedback:</legend>
+                    <legend>Please provide your feedback:</legend> <!-- Legend for the fieldset -->
 
                     <div>
                         <label>
-                            <input type="radio" name="feedbackType" value="General" required>
+                            <input type="radio" name="feedbackType" value="General" required> <!-- Radio button for General Feedback -->
                             General Feedback
                         </label><br>
                         <label>
-                            <input type="radio" name="feedbackType" value="Suggestion">
+                            <input type="radio" name="feedbackType" value="Suggestion"> <!-- Radio button for Suggestions -->
                             Suggestions
                         </label><br>
                         <label>
-                            <input type="radio" name="feedbackType" value="Issue">
+                            <input type="radio" name="feedbackType" value="Issue"> <!-- Radio button for Reporting an Issue -->
                             Report an Issue
                         </label>
                     </div>
 
-                    <label for="userMessage">Your Message:</label>
-                    <textarea id="userMessage" name="userMessage" rows="5" required placeholder="Type your message here..."></textarea>
-                    <button type="submit" class="btn">Submit Feedback</button>
+                    <label for="userMessage">Your Message:</label> <!-- Label for the textarea -->
+                    <textarea id="userMessage" name="userMessage" rows="5" required placeholder="Type your message here..."></textarea> <!-- Textarea for user input -->
+                    <button type="submit" class="btn">Submit Feedback</button> <!-- Submit button for the form -->
                 </fieldset>
             </form>
-            <!-- Success popup when feedback is submitted -->
-            <div id="successMessage" class="hidden popup">
-                <div class="popup-content">
-                    <span class="close" id="closePopupFeedback">&times;</span>
-                    <p>Your feedback has been submitted successfully!</p>
-                </div>
-            </div>
+            <p id="feedbackSuccessMessage" class="success-message hidden"></p> <!-- Placeholder for success message after form submission -->
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 VOYAGESPHERE. All rights reserved.</p>
+        <p>&copy; 2024 VOYAGESPHERE. All rights reserved.</p> <!-- Copyright notice -->
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> <!-- Link to external JavaScript file -->
 </body>
 
 </html>
