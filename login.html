@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Link to Google Fonts for styling -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS file for styles -->
+    <title>VOYAGESPHERE - Login</title> <!-- Title of the webpage -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>VOYAGESPHERE</h1> <!-- Logo of the website -->
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li> <!-- Link to Home page -->
+                <li><a href="catalogue.html">Catalogue</a></li> <!-- Link to Catalogue page -->
+                <li><a href="login.html">Login</a></li> <!-- Link to Login page -->
+                <li><a href="contact.html">Contact Us</a></li> <!-- Link to Contact Us page -->
+                <li><a href="feedback.html">Feedback</a></li> <!-- Link to Feedback page -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Login to VOYAGESPHERE</h1> <!-- Main heading for the login section -->
+            <form id="loginForm"> <!-- Login form -->
+                <label for="username">Username:</label> <!-- Label for username input -->
+                <input type="text" id="username" required> <!-- Input for username -->
+                <label for="password">Password:</label> <!-- Label for password input -->
+                <input type="password" id="password" required> <!-- Input for password -->
+                <button type="submit" class="btn">Login</button> <!-- Submit button for the form -->
+            </form>
+        </section>
+
+        <!-- Popup Structure for login success -->
+        <div id="popup" class="popup hidden"> <!-- Popup for successful login -->
+            <div class="popup-content">
+                <span class="close" id="closePopup">&times;</span> <!-- Close button for the popup -->
+                <p>You are logged in successfully!</p> <!-- Message displayed on successful login -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VOYAGESPHERE. All rights reserved.</p> <!-- Footer with copyright information -->
+    </footer>
+
+    <script src="js/script.js"></script> <!-- Link to external JavaScript file for functionality -->
+</body>
+
+</html>

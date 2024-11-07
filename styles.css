@@ -1,0 +1,218 @@
+/* General reset */
+* {
+    box-sizing: border-box; /* Ensures padding and borders do not affect element's total width and height */
+    margin: 0; /* Resets margin for all elements to zero */
+    padding: 0; /* Resets padding for all elements to zero */
+}
+
+/* Body styling */
+body {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Minimum height of body to fill viewport */
+    font-family: 'Roboto', sans-serif; /* General font for readability */
+    background: #f0f4f8; /* Light background color for the body */
+}
+
+/* Header and Footer Styling */
+header, footer {
+    background: linear-gradient(to right, #ff0000, #ffff00); /* Gradient from blue to dark blue */
+    color: white; /* White text for readability on gradient */
+    padding: 15px 0; /* Top and bottom padding */
+    text-align: center; /* Center-align text within header and footer */
+    width: 100%; /* Full width for header and footer */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth effect */
+}
+
+footer {
+    margin-top: auto; /* Push footer to the bottom of the page */
+}
+
+/* Main Content Styling */
+main {
+    flex: 1; /* Fill remaining space */
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white background for main content */
+    padding: 20px; /* General padding for main content area */
+    border-radius: 10px; /* Rounded corners for content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    width: 90%; /* Width of main content */
+    max-width: 800px; /* Maximum width to keep layout focused */
+    margin: 20px auto; /* Center align the main content with margins */
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #333; /* Darker text color for headings */
+    margin-bottom: 15px; /* Space below headings */
+    text-align: center; /* Center-align headings */
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block; /* Inline-block button styling */
+    background: linear-gradient(to right, #007bff, #0056b3); /* Button gradient */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners for button */
+    text-decoration: none; /* Remove underline from links */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #0056b3, #004494); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.btn:active {
+    background: linear-gradient(to right, #0056b3, #004494); /* Maintain darker gradient when pressed */
+    transform: translateY(2px); /* Slight downward movement to simulate pressing */
+}
+
+.btn:disabled {
+    background: rgba(0, 123, 255, 0.5); /* Lighter background for disabled state */
+    opacity: 0.5; /* Indicate disabled state */
+    cursor: not-allowed; /* Cursor changes to not-allowed when hovering over disabled buttons */
+}
+
+/* Link Styles */
+ul li a {
+    color: #007bff; /* Standard link color */
+    transition: color 0.3s; /* Transition effect for link hover */
+}
+
+ul li a:hover {
+    color: #0056b3; /* Darker color for link hover effect */
+}
+
+/* Feature Section */
+.features {
+    display: flex; /* Display features in a flex container */
+    flex-wrap: wrap; /* Allow wrapping of features on small screens */
+    justify-content: space-around; /* Space items evenly in the container */
+    margin: 20px 0; /* Vertical margin for features */
+}
+
+.feature {
+    background: white; /* Background color for feature cards */
+    border-radius: 8px; /* Rounded corners for feature cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth effect */
+    margin: 10px; /* Space around each feature */
+    padding: 20px; /* Padding inside feature cards */
+    flex: 1 1 calc(25% - 40px); /* Responsive sizing for feature cards */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.feature-image {
+    width: 100%; /* Feature image takes full width */
+    height: auto; /* Maintain aspect ratio of images */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+/* Team Member Styles */
+.team-container {
+    display: flex; /* Flexbox layout for team members */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Space team members evenly */
+    margin: 20px 0; /* Vertical margin */
+}
+
+.team-member {
+    background: white; /* Background color for team member cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth effect */
+    margin: 10px; /* Space around each member */
+    padding: 20px; /* Padding inside member cards */
+    text-align: center; /* Center-align text and images */
+    width: calc(20% - 40px); /* Responsive sizing, adjusted for margins */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.team-image {
+    width: 100%; /* Full width for team images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 15px; /* Space below images */
+}
+
+/* Testimonials Styles */
+.testimonials {
+    margin: 20px 0; /* Vertical margin for testimonials */
+}
+
+.testimonial {
+    background: rgba(0, 123, 255, 0.05); /* Light background for testimonials */
+    padding: 15px; /* Padding inside testimonial boxes */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px 0; /* Vertical space between testimonials */
+}
+
+.testimonial .author {
+    font-weight: bold; /* Bold text for testimonial authors */
+}
+
+/* Popup Styling */
+.hidden {
+    display: none; /* Hides the popup by default */
+}
+
+.popup {
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    position: fixed; /* Fixed position on the screen */
+    z-index: 1000; /* Ensure popup is on top */
+    left: 0; /* Align to left */
+    top: 0; /* Align to top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay for effect */
+}
+
+.popup-content {
+    background: white; /* Background color for popup */
+    padding: 20px; /* Padding inside popup */
+    border-radius: 5px; /* Rounded corners */
+    width: 300px; /* Width for popup */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth effect */
+}
+
+/* Loader Animation */
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey border for loader */
+    border-top: 8px solid #3498db; /* Blue for the top part of loader */
+    border-radius: 50%; /* Rounded loader */
+    width: 50px; /* Width for loader */
+    height: 50px; /* Height for loader */
+    animation: spin 1s linear infinite; /* Continuous spinning animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Start from 0 degrees */
+    100% { transform: rotate(360deg); } /* Rotate to 360 degrees */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-member {
+        width: 100%; /* Stack team members vertically on smaller screens */
+        margin-bottom: 20px; /* Space below each member */
+    }
+
+    .features {
+        flex-direction: column; /* Stack features vertically */
+        align-items: center; /* Center align features */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Smaller heading size for mobile */
+    }
+}
