@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Link to Google Fonts for styling -->
-    <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS file for styles -->
-    <title>VOYAGESPHERE - Login</title> <!-- Title of the webpage -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS file -->
+    <title>VOYAGESPHERE - Login</title> <!-- Page title -->
 </head>
 
 <body>
@@ -35,22 +35,15 @@
                 <input type="password" id="password" required> <!-- Input for password -->
                 <button type="submit" class="btn">Login</button> <!-- Submit button for the form -->
             </form>
+            <p id="loginSuccessMessage" class="success-message hidden"></p> <!-- Placeholder for success message -->
         </section>
-
-        <!-- Popup Structure for login success -->
-        <div id="popup" class="popup hidden"> <!-- Popup for successful login -->
-            <div class="popup-content">
-                <span class="close" id="closePopup">&times;</span> <!-- Close button for the popup -->
-                <p>You are logged in successfully!</p> <!-- Message displayed on successful login -->
-            </div>
-        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 VOYAGESPHERE. All rights reserved.</p> <!-- Footer with copyright information -->
+        <p>&copy; 2024 VOYAGESPHERE. All rights reserved.</p> <!-- Copyright notice -->
     </footer>
 
-    <script src="js/script.js"></script> <!-- Link to external JavaScript file for functionality -->
+    <script src="js/script.js"></script> <!-- Link to external JavaScript file -->
 </body>
 
 </html>
