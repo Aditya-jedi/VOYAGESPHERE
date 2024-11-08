@@ -21,12 +21,20 @@ nav {
     justify-content: space-between; /* Space out the logo and the menu items */
     align-items: center; /* Center items vertically */
     padding: 15px; /* Padding around navigation */
-    background: linear-gradient(to right, #00f260, #0575E6); /* Gradient background for navigation bar */
+    background: linear-gradient(to right, #43cea2, #ff9a8b); /* Gradient background for navigation bar */
 }
 
 nav .logo {
-    font-size: 1.8em; /* Size of the logo text */
+    font-size: 2em; /* Size of the logo text */
     color: white; /* Color of the logo text */
+    display: flex; /* Use flex to align logo and heading */
+    align-items: center; /* Center logo vertically */
+}
+
+.logo-image {
+    width: 50px; /* Adjust logo image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
 }
 
 nav ul {
@@ -54,9 +62,9 @@ nav ul li a:hover {
 main {
     flex: 1; /* Fill remaining space */
     background: rgba(255, 255, 255, 0.95); /* White background with opacity */
-    padding: 20px; /* General padding for main content area */
+    padding: 40px 20px; /* Increased padding for a more spacious look */
     border-radius: 10px; /* Rounded corners for content */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
     width: 90%; /* Width of main content */
     max-width: 800px; /* Maximum width to keep layout focused */
     margin: 20px auto; /* Center align the main content with margins */
@@ -77,13 +85,13 @@ h1, h2, h3 {
 /* Button Styling */
 .btn {
     display: inline-block; /* Inline-block button styling */
-    background: linear-gradient(to right, #3366ff, #ff3399); /* Button gradient */
+    background: linear-gradient(to right, #3b8d99, #6dd5ed); /* Button gradient */
     color: #fff; /* White text color */
     padding: 10px 20px; /* Padding for button */
     border-radius: 5px; /* Rounded corners for button */
     text-decoration: none; /* Remove underline from links */
     transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
-    font-size: 1.1em; /* Slightly larger font size for buttons */
+    font-size: 1.1em; /* Size for buttons */
 }
 
 .btn:hover {
@@ -141,6 +149,33 @@ ul li a:hover {
     color: #333; /* Darker color for team members' text */
 }
 
+/* Team Container Styles */
+.team-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to next line on smaller screens */
+    justify-content: center; /* Center align team members */
+    margin: 20px 0; /* Vertical margin for spacing */
+}
+
+/* Team Member Styles */
+.team-member {
+    background: white; /* White background for each team member */
+    padding: 20px; /* Padding inside member cards */
+    margin: 15px; /* Space between members */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: center; /* Center text within the cards */
+    width: 200px; /* Fixed width for consistency */
+}
+
+/* Member Image Styling */
+.team-image {
+    width: 80%; /* Width for member images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 15px; /* Space below images */
+}
+
 /* Testimonials Styles */
 .testimonials {
     margin: 20px 0; /* Vertical margin for testimonials */
@@ -179,7 +214,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .team-member {
-        width: 100%; /* Stack team members vertically on smaller screens */
+        width: 90%; /* Stack team members vertically on smaller screens */
         margin-bottom: 20px; /* Space below each member */
     }
 
