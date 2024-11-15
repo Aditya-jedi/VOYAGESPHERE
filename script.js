@@ -53,10 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
         continentNameEl.textContent = continent; // Set continent name in the header
         const countriesData = { // Object containing continents and their respective countries
             'Asia': ['China', 'Japan', 'India','Hong Kong','Russia','singapore','saudi arabia','United Arab Emirates','Thailand','vietnam'],
-            'Europe': ['France', 'Germany', 'Italy'],
+            'Europe': ['France', 'Spain', 'Italy', 'Turkey', 'United Kingdom', 'Germany', 'Greece', 'Portugal', 'Netherlands', 'Switzerland'],
             'North America': ['USA', 'Canada', 'Mexico'],
             'South America': ['Brazil', 'Chile', 'Peru', 'Argentina', 'Colombia', 'Venezuela', 'Paraguay', 'Uruguay', 'Bolivia' ],
-            'Africa': ['South Africa', 'Kenya', 'Egypt'],
+            'Africa': ['Botswana', 'South Africa', 'Mauritius', 'Zimbabwe', 'Egypt', 'Nigeria', 'Morocco', 'Kenya', 'Seychelles', 'Madagascar'],
             'Australia': ['Australia'],
             'Antarctica': ['Antarctica']
         };  
