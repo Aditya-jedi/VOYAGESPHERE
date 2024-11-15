@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'Asia': ['China', 'Japan', 'India','Hong Kong','Russia','singapore','saudi arabia','United Arab Emirates','Thailand','vietnam'],
             'Europe': ['France', 'Germany', 'Italy'],
             'North America': ['USA', 'Canada', 'Mexico'],
-            'South America': ['Brazil', 'Argentina', 'Chile'],
+            'South America': ['Brazil', 'Chile', 'Peru', 'Argentina', 'Colombia', 'Venezuela', 'Paraguay', 'Uruguay', 'Bolivia' ],
             'Africa': ['South Africa', 'Kenya', 'Egypt'],
             'Australia': ['Australia'],
             'Antarctica': ['Antarctica']
