@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const countriesData = { // Object containing continents and their respective countries
             'Asia': ['China', 'Japan', 'India','Hong Kong','Russia','singapore','saudi arabia','United Arab Emirates','Thailand','vietnam'],
             'Europe': ['France', 'Spain', 'Italy', 'Turkey', 'United Kingdom', 'Germany', 'Greece', 'Portugal', 'Netherlands', 'Switzerland'],
-            'North America': ['USA', 'Canada', 'Mexico'],
+            'North America': ['United States Of America', 'Canada', 'Mexico','Caribbean','Cuba','Belize','Costa Rica','Greenland','The Bahamas','Panama'],
             'South America': ['Brazil', 'Chile', 'Peru', 'Argentina', 'Colombia', 'Venezuela', 'Paraguay', 'Uruguay', 'Bolivia' ],
             'Africa': ['Botswana', 'South Africa', 'Mauritius', 'Zimbabwe', 'Egypt', 'Nigeria', 'Morocco', 'Kenya', 'Seychelles', 'Madagascar'],
-            'Australia': ['Australia'],
+            'Australia': ['New Zealand','Kiribati','Marshall Island','Solomon Island','Tonga','Samoa','Palau','Micronesia'],
             'Antarctica': ['Antarctica']
         };  
         }
