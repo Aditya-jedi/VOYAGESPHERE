@@ -1,0 +1,24 @@
+/voyagesphere
+│
+├── index.html                // Home Page
+├── catalogue.html            // Catalogue of Continents
+├── continent.html            // Subcategories of countries under a continent
+├── country.html              // List of Things to Do in a Country/City
+├── login.html                // Login Page
+├── contact.html              // Contact Page with Team Information
+├── feedback.html             // Feedback Form Page
+├── css
+│   └── styles.css            // Main CSS styles
+└── js
+    └── script.js             // JavaScript functions
+└── images
+    ├── logo.png              // Background logo image
+    ├── team-leader.jpg       // Team member images
+    ├── team-member1.jpg
+    ├── team-member2.jpg
+    ├── team-member3.jpg
+    ├── team-member4.jpg
+    ├── feature1-placeholder.jpg // Placeholder images for features
+    ├── feature2-placeholder.jpg
+    ├── feature3-placeholder.jpg
+    ├── feature4-placeholder.jpg
